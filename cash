@@ -1,0 +1,23 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class RewardValueTests {
+
+    @Test
+    public void testCashToMilesConversion() {
+        RewardValue rewardValue = new RewardValue();
+        double cash = 100.0;
+        double expectedMiles = 1000.0;
+        double actualMiles = rewardValue.convertCashToMiles(cash);
+        Assertions.assertEquals(expectedMiles, actualMiles);
+    }
+
+    @Test
+    public void testMilesToCashConversion() {
+        RewardValue rewardValue = new RewardValue();
+        double miles = 1000.0;
+        double expectedCash = 100.0;
+        double actualCash = rewardValue.convertMilesToCash(miles);
+        Assertions.assertEquals(expectedCash, actualCash);
+    }
+}
